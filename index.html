@@ -42,6 +42,13 @@
                     </div>
                     
                     <div class="inputBox">
+                        
+                        <input type="text" class="form-control" name="Name" id="Name" placeholder="الحي او القرية"
+                            required="">
+                            <label class="lab" for="trxt">السكن </label>
+                    </div>
+                    
+                    <div class="inputBox">
                         <input type="phone number" class="form-control" name="Subject" id="Subject"
                             placeholder="رقم الهاتف" required="">
                             <label class="lab"  for="phone number">رقم الهاتف</label>
@@ -79,7 +86,7 @@
 
             // var body = $('#body').val();
 
-            var Body = 'Name: ' + name + '<br>Email: ' + email + '<br>Phone Number: ' + subject + '<br>Message: ' + message;
+            var Body = 'Name: ' + name + 'Name: ' + name + '<br>Email: ' + email + '<br>Phone Number: ' + subject + '<br>Message: ' + message;
             //console.log(name, phone, email, message);
 
             Email.send({
