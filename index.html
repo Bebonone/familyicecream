@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Family Ice</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <div class="container">
+        <div class="text">
+           <h1>Family Ice</h1>
+           <h1>أيسكريم العائلة</h1>
+        </div>
+        <hr>
+
+        <div class="text">
+            <h2>Share and Win</h2>
+            <h2>شارك واربح</h2>
+
+        </div>
+        <hr>
+
+        <div class="text2">
+            <h4>يتم أختيار رابح اسبوعياً من المشاركين يحصول الرابح علي قسيمة شراء من أيسكريم العائلة بقيمة 1000 جنيه</h4>
+        </div>
+
+        <section class="contact" id="contact">
+            <div class="title">
+            </div>
+            <form action="javascript:sendmail()" method="post">
+                <div class="contactForm">
+                    <h3 id="h3">Send Message</h3>
+                    <h3 class="lab">أرسل بياناتك وادخل في سحب أسبوعي</h3>
+                    <div class="inputBox">
+                        
+                        <input type="text" class="form-control" name="Name" id="Name" placeholder="الإسم"
+                            required="">
+                            <label class="lab" for="trxt">الإسم رباعي</label>
+                    </div>
+                    
+                    <div class="inputBox">
+                        <input type="phone number" class="form-control" name="Subject" id="Subject"
+                            placeholder="رقم الهاتف" required="">
+                            <label class="lab"  for="phone number">رقم الهاتف</label>
+                    </div>
+                    
+                    <div class="inputBox">
+                        <button type="submit" class="btn btn-contact">إرسال</button>
+                    </div>
+                </div>
+            </form>
+
+        </section>
+        
+
+        <div class="img">
+            <img src="image/p3.jpeg" width="360px">
+        </div>
+
+
+    </div>
+
+    
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"
+        integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+
+    <script>
+
+        function sendmail() {
+
+            var name = $('#Name').val();
+            var email = $('#Sender').val();
+            var subject = $('#Subject').val();
+            var message = $('#Message').val();
+
+            // var body = $('#body').val();
+
+            var Body = 'Name: ' + name + '<br>Email: ' + email + '<br>Phone Number: ' + subject + '<br>Message: ' + message;
+            //console.log(name, phone, email, message);
+
+            Email.send({
+                SecureToken: "fbf31702-bb7f-4a4e-9c1c-4ccf17ee777f",
+                To: 'fmly.cream@gmail.com',
+                From: "fmly.cream@gmail.com",
+                Subject: "New message on contact from " + name,
+                Body: Body
+            }).then(
+                message => {
+                    //console.log (message);
+                    if (message == 'OK') {
+                        document.getElementById("h3").innerHTML = ("your message has been sent");
+                        alert(" مبروك دخلت السحب تم إرسال بياناتك بنجاح شكراً للتواصل معنا ")
+                    }
+                    else {
+                        console.error(message);
+                        document.getElementById("h3").innerHTML = ("There is error at sending message. ");
+                    }
+
+                }
+            );
+
+
+
+        }
+
+
+    </script>
+    </script>
+
+    
+</body>
+</html>

@@ -1,0 +1,57 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.container
+{
+
+    margin: 0 auto;
+    background-image: url(../image/p1.jpeg);
+    background-repeat: no-repeat;
+}
+
+.text
+{
+    text-align: center;
+    color: #ff01a5;
+}
+
+.contact
+{
+    margin: 50px 20px;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.8;
+}
+
+.lab
+{
+    color: #83ff07;
+}
+
+.form-control
+{
+    margin: 10px;
+}
+
+.btn 
+{
+    padding: 5px 20px;
+}
+
+.text2
+{
+    margin-top: 50px;
+    text-align: center;
+    color: red;
+}
+
+.img img
+{
+    margin-top: 25px;
+    border-bottom-left-radius: 80px;
+    border-top-right-radius: 80px;
+}
