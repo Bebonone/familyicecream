@@ -1,15 +1,17 @@
+
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
+    font-family: 'Sofia', cursive;}
 
 
 .container
 {
 
     margin: 0 auto;
-    background-image: url(p1.jpeg);
+    background-image: url(../image/p1.jpeg);
     background-repeat: no-repeat;
 }
 
@@ -17,6 +19,10 @@
 {
     text-align: center;
     color: #ff01a5;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 800;
+    font-family: 'Sofia', cursive;
+    text-shadow: 2px 2px black; 
 }
 
 .contact
@@ -40,13 +46,22 @@
 .btn 
 {
     padding: 5px 20px;
+    background-color: #ff01a5;
+    border-radius: 10px;
+    color: wheat;
+    font-size: 20px;
+    font-weight: bold;
 }
 
 .text2
 {
     margin-top: 50px;
     text-align: center;
-    color: red;
+    color: #5ccd6f;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    text-shadow: 2px 2px black;
+    font-size: 17px;
 }
 
 .img img
@@ -54,4 +69,20 @@
     margin-top: 25px;
     border-bottom-left-radius: 80px;
     border-top-right-radius: 80px;
+}
+
+.lab
+{
+    color: #ff01a5;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    text-shadow: 2px 2px #7b857d;
+    font-size: 20px;
+
+}
+
+.footer
+{
+    text-align: center;
+    background-color: violet;
 }
