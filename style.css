@@ -86,3 +86,26 @@
     text-align: center;
     background-color: violet;
 }
+
+
+.winner 
+{
+    margin: 0 auto;
+    text-align: center;
+    color: blue ;
+}
+
+.win
+{
+    margin-left: 85px;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon img
+{
+    margin: 10px 45px;
+    border: #ff01a5 solid 2px;
+    border-radius: 50px;
+}
+
