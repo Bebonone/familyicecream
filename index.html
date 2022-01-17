@@ -1,3 +1,5 @@
+<?php include 'sendemail.php'; ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,6 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Family Ice</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css">
 </head>
 <body>
 
@@ -30,7 +33,8 @@
         <section class="contact" id="contact">
             <div class="title">
             </div>
-            <form action="javascript:sendmail()" method="post">
+            <?php echo $alert; ?>
+            <form action=" " method="post">
                 <div class="contactForm">
                     <h3 id="h3">Send Message</h3>
                     <h3 class="lab">أرسل بياناتك وادخل في سحب أسبوعي</h3>
@@ -43,14 +47,14 @@
                     
                     <div class="inputBox">
 
-                        <input type="text" class="form-control" name="Sender" id="Sender" placeholder="الحي / القرية"
+                        <input type="text" class="form-control" name="email" id="Sender" placeholder="الحي / القرية"
                             required="">
                             <label class="lab"  for="phone number">السكن  </label>
 
                     </div>
                     
                     <div class="inputBox">
-                        <input type="phone number" class="form-control" name="Subject" id="Subject"
+                        <input type="phone number" class="form-control" name="message" id="Subject"
                             placeholder="رقم الهاتف" required="">
                             <label class="lab"  for="phone number">رقم الهاتف</label>
                     </div>
@@ -116,7 +120,11 @@
 
     </div>
 
-
+    <script type="text/javascript">
+    if(window.history.replaceState){
+      window.history.replaceState(null, null, window.location.href);
+    }
+    </script>
     
     <script src="https://code.jquery.com/jquery-2.2.4.min.js"
         integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
